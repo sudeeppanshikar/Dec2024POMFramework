@@ -25,7 +25,7 @@ public class LoginPage {
 
 	private By emailid = By.id("input-email");
 	private By password = By.id("input-password");
-	private By forgottenPassword = By.linkText("Forgotten Password");
+	private By forgottenPassword = By.linkText("Forgotten Password11");
 	private By loginbutton = By.cssSelector("input.btn");
 	private By continuebutton = By.linkText("Continue");
 	private By rightmenulists = By.xpath("//div[@class='list-group']/a");
