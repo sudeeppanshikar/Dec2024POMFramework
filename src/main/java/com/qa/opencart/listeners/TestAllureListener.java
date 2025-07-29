@@ -1,6 +1,5 @@
 package com.qa.opencart.listeners;
 
-
 import io.qameta.allure.Attachment;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -11,14 +10,12 @@ import org.testng.ITestResult;
 
 import com.qa.opencart.factory.DriverFactory;
 
-
 public class TestAllureListener implements ITestListener {
 
 	private static String getTestMethodName(ITestResult iTestResult) {
 		return iTestResult.getMethod().getConstructorOrMethod().getName();
-	}
+	}	
 
-	
 	// Text attachments for Allure
 	@Attachment(value = "Page screenshot", type = "image/png")
 	public byte[] saveScreenshotPNG(WebDriver driver) {
@@ -40,7 +37,7 @@ public class TestAllureListener implements ITestListener {
 	@Override
 	public void onStart(ITestContext iTestContext) {
 		System.out.println("I am in onStart method " + iTestContext.getName());
-		//iTestContext.setAttribute("WebDriver", BasePage.getDriver());
+		// iTestContext.setAttribute("WebDriver", BasePage.getDriver());
 	}
 
 	@Override
@@ -57,19 +54,19 @@ public class TestAllureListener implements ITestListener {
 	public void onTestSuccess(ITestResult iTestResult) {
 		System.out.println("I am in onTestSuccess method " + getTestMethodName(iTestResult) + " succeed");
 	}
-	/*
-	 * @Override public void onTestFailure(ITestResult iTestResult) {
-	 * System.out.println("I am in onTestFailure method " +
-	 * getTestMethodName(iTestResult) + " failed"); Object testClass =
-	 * iTestResult.getInstance(); //WebDriver driver = BasePage.getDriver(); //
-	 * Allure ScreenShotRobot and SaveTestLog if (DriverFactory.getDriver()
-	 * instanceof WebDriver) {
-	 * System.out.println("Screenshot captured for test case:" +
-	 * getTestMethodName(iTestResult));
-	 * saveScreenshotPNG(DriverFactory.getDriver()); } // Save a log on allure.
-	 * saveTextLog(getTestMethodName(iTestResult) +
-	 * " failed and screenshot taken!"); }
-	 */
+	
+	  @Override public void onTestFailure(ITestResult iTestResult) {
+	  System.out.println("I am in onTestFailure method " +
+	  getTestMethodName(iTestResult) + " failed"); Object testClass =
+	  iTestResult.getInstance(); //WebDriver driver = BasePage.getDriver(); //
+	  if (DriverFactory.getDriver()
+	  instanceof WebDriver) {
+	  System.out.println("Screenshot captured for test case:" +
+	  getTestMethodName(iTestResult));
+	  saveScreenshotPNG(DriverFactory.getDriver()); } // Save a log on allure.
+	  saveTextLog(getTestMethodName(iTestResult) +
+	  " failed and screenshot taken!"); }
+	 
 
 	@Override
 	public void onTestSkipped(ITestResult iTestResult) {

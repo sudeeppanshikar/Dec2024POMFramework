@@ -144,9 +144,10 @@ public class ProductInfoPageTest extends BaseTest {
 	@Test(priority = Integer.MAX_VALUE - 1, dataProvider = "getCartTestDataForMulitpletems")
 	public void cartButtonDetailsMultipleItemTest(String searchValue, String productName1, String productName2,
 			String Price) {
-
+		
 		searchrespage = accountpage.doSearch(searchValue);
 		prodinfopage = searchrespage.selectProduct(productName1);
+		prodinfopage.removeItemsFromCartFun();
 		prodinfopage.addItemToCart(true);
 		searchrespage = accountpage.doSearch(searchValue);
 		prodinfopage = searchrespage.selectProduct(productName2);

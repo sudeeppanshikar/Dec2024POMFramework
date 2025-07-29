@@ -130,8 +130,9 @@ public class ProductInfoPage {
 
 	public void removeItemsFromCartFun() {
 
-		elementUtil.doClick(cartButton);
+		
 		List<WebElement> removeFromCart = null;
+		elementUtil.doClick(cartButton);
 
 		try {
 			removeFromCart = elementUtil.waitForElementsVisibleBy(removeItemsFromCart, DEFAULT_TIME_OUT);

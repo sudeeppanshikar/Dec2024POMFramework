@@ -1,6 +1,6 @@
 package com.qa.opencart.tests;
 
-import static com.qa.opencart.constants.AppConstants.HOME_PAGE_FRACTIONAL_URL;
+
 import static com.qa.opencart.constants.AppConstants.HOME_PAGE_TITLE;
 import static com.qa.opencart.constants.AppConstants.*;
 
@@ -34,11 +34,11 @@ public class AccountPageTest extends BaseTest {
 	}
 
 	@Test
-	public void acctPageTittleURL() {
+	public void acctPageURLTest() {
 
 		String acttitle = accountpage.getaccountpageURL();
 		System.out.println(acttitle);
-		Assert.assertTrue(acttitle.contains(HOME_PAGE_FRACTIONAL_URL));
+		Assert.assertTrue(acttitle.contains(ACCOUNT_PAGE_FRACTIONAL_URL));
 
 	}
 

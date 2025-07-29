@@ -1,7 +1,7 @@
 package com.qa.opencart.pages;
 
 import static com.qa.opencart.constants.AppConstants.DEFAULT_TIME_OUT;
-import static com.qa.opencart.constants.AppConstants.HOME_PAGE_FRACTIONAL_URL;
+import static com.qa.opencart.constants.AppConstants.*;
 import static com.qa.opencart.constants.AppConstants.HOME_PAGE_TITLE;
 
 import java.util.List;
@@ -34,7 +34,7 @@ public class AccountPage {
 
 	public String getaccountpageURL() {
 
-		return elementUtil.waitforURLContains(HOME_PAGE_FRACTIONAL_URL, DEFAULT_TIME_OUT);
+		return elementUtil.waitforURLContains(ACCOUNT_PAGE_FRACTIONAL_URL, DEFAULT_TIME_OUT);
 
 	}
 

@@ -7,7 +7,6 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
@@ -35,9 +34,11 @@ public class BaseTest {
 	protected Properties prop;
 
 	@Step("Intializing the Driver through Driver Factory")
+	// @Parameters({ "browser" })
 	@Parameters({ "browser", "browserversion" })
 
 	@BeforeTest
+	// public void setup(@Optional String browserName)
 	public void setup(@Optional String browserName, @Optional String browserversionName) {
 
 		df = new DriverFactory();
