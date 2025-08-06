@@ -6,7 +6,7 @@ import java.util.List;
 
 public class AppConstants {
 
-	public final static String LOGIN_PAGE_TITLE = "Account Login#";
+	public final static String LOGIN_PAGE_TITLE = "Account Login";
 	public final static String HOME_PAGE_TITLE = "My Account";
 	public final static String RESULTS_SEARCH_PAGE_FRACTIONAL_TITLE = "Search";
 

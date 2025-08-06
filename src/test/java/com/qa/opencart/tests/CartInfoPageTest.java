@@ -1,6 +1,7 @@
 package com.qa.opencart.tests;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -14,7 +15,7 @@ import io.qameta.allure.Epic;
 @Epic("EPIC-03 - CarT page behaviour and Validations ")
 public class CartInfoPageTest extends BaseTest {
 
-	@BeforeTest
+	@BeforeClass
 
 	public void cartInfoPageSetup() {
 		accountpage = loginpage.doLogin(prop.getProperty("username"), prop.getProperty("password"));

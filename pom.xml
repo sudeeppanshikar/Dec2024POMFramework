@@ -90,8 +90,7 @@
 					<forkCount>3</forkCount>
 					<reuseForks>true</reuseForks>
 					<suiteXmlFiles>
-						<suiteXmlFile>src/test/resources/testrunners/testng_Sanity.xml</suiteXmlFile>
-						<!-- 	 src/test/resources/testrunners/testng_Sanity.xml   ${suiteXmlFile}-->
+						<suiteXmlFile>${suiteFile}</suiteXmlFile>
 
 					</suiteXmlFiles>
 

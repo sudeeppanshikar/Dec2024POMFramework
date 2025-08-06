@@ -1,40 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Opencart App Test Regression Suite" verbose="3" thread-count="2" parallel="tests">
+<suite name="Opencart App Test Regression Suite" verbose="3" thread-count="4" parallel="tests">
 
 
-	
-<!-- 	<listeners>
+	<!-- 	<listeners>
 		<listener class-name="com.aventstack.chaintest.plugins.ChainTestListener" />
 		<listener class-name="com.qa.opencart.listeners.TestAllureListener" />
 		
 	</listeners>
--->	
+-->
 
 	<test name="Login Page Test">
- <parameter name="browser" value="firefox" /> 
- <parameter name="browserversion" value="123.0" />
+		<parameter name="browser" value="firefox" />
+		<parameter name="browserversion" value="124.0" />
 		<classes>
 			<class name="com.qa.opencart.tests.LoginPageTest" />
 		</classes>
 	</test>
- 
-	<!--<test name="Account Page test">
-	 <parameter name="browser" value="firefox" /> 
+
+	<test name="Account Page test">
+	 <parameter name="browser" value="chrome" /> 
+	 <parameter name="browserversion" value="126.0" />
 		<classes>
 			<class name="com.qa.opencart.tests.AccountPageTest" />
 		</classes>
 	</test>
 	
+
 	<test name="Register Page test">
+		 <parameter name="browser" value="chrome" /> 
+	 <parameter name="browserversion" value="113.0" />
 
 		<classes>
 			<class name="com.qa.opencart.tests.RegisterPageTest" />
 		</classes>
 	</test>
 
-
+	<!--
 	 <test name="SearchTest.java">
 
 		<classes>
