@@ -40,6 +40,7 @@ public class LoginPageTest extends BaseTest {
 	public void loginPageSuccefullTest() {
 		String uname = prop.getProperty("username");
 		String pwd = prop.getProperty("password");
+		System.out.println(uname + pwd);
 		accountpage = loginpage.doLogin(uname, pwd);
 		String actTittle = accountpage.getaccountpageTittle();
 		Assert.assertEquals(actTittle, HOME_PAGE_TITLE);
