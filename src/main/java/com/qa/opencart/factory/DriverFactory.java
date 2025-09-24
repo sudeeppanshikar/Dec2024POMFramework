@@ -71,7 +71,8 @@ public class DriverFactory {
 			log.warn("Enter the correct browser");
 			throw new BrowserExceptions("Incorrect Browser");
 		}
-
+		prop = new Properties();
+		FileInputStream ip = null;
 		return getDriver();
 
 	}
@@ -197,14 +198,14 @@ public class DriverFactory {
 	public Properties initprop() {
 
 		String envName = System.getProperty("env");
-		String baseURI = System.getProperty("URL");
+		//String baseURI = System.getProperty("URL");
 		prop = new Properties();
 		FileInputStream ip = null;
 		try {
 			if (envName == null) {
 				System.out.println("env is null , hence running the test using the default properties ");
 				ip = new FileInputStream("./src/test/resources/config/com.qa.properties");
-				prop.setProperty("URL", baseURI);
+				//prop.setProperty("URL", baseURI);
 
 			}
 
