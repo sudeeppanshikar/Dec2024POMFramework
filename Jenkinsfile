@@ -7,6 +7,12 @@ pipeline {
     }
 
     stages {
+        stage('Clean Workspace') {
+            steps {
+                cleanWs()
+            }
+        }
+
         stage('Checkout') {
             steps {
                 git branch: 'main', url: 'https://github.com/sudeeppanshikar/Dec2024POMFramework.git'
@@ -49,16 +55,8 @@ pipeline {
 
     post {
         always {
-            script {
-                // Mark build as unstable if tests failed
-                def testFailed = sh(script: 'grep -q "Failures:" target/surefire-reports/*.txt', returnStatus: true)
-                if (testFailed == 0) {
-                    currentBuild.result = 'UNSTABLE'
-                    echo "Some tests failed — build marked UNSTABLE"
-                } else {
-                    echo "All tests passed"
-                }
-            }
+            // Publish test results for this run only
+            junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
         }
     }
 }
