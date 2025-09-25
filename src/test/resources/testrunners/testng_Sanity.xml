@@ -19,7 +19,7 @@
 	</test>
  
 	<!--<test name="Account Page test">
-	
+	initBrowserinitBrowserinitBrowserinitBrowserinitBrowserinitBrowser
 		<classes>
 			<class name="com.qa.opencart.tests.AccountPageTest" />
 		</classes>

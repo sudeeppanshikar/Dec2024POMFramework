@@ -204,7 +204,7 @@ public class DriverFactory {
 		try {
 			if (envName == null) {
 				System.out.println("env is null , hence running the test using the default properties ");
-				ip = new FileInputStream("./src/test/resources/config/com.qa.properties");
+				ip = new FileInputStream("./src/test/resources/config/config.properties");
 				//prop.setProperty("URL", baseURI);
 
 			}

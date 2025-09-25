@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Opencart App Test Regression Suite" verbose="3" thread-count="4" parallel="tests">
+<suite name="Opencart App Test Regression Suite" verbose="3" thread-count="1" parallel="tests">
 
 
 	<!-- 	<listeners>
@@ -12,7 +12,7 @@
 -->
 
 	<test name="Login Page Test">
-		<parameter name="browser" value="firefox" />
+		<parameter name="browser" value="chrome" />
 		<parameter name="browserversion" value="124.0" />
 		<classes>
 			<class name="com.qa.opencart.tests.LoginPageTest" />
@@ -37,7 +37,7 @@
 		</classes>
 	</test>
 
-	<!--
+<!--	
 	 <test name="SearchTest.java">
 
 		<classes>

@@ -43,6 +43,7 @@ public class LoginPageTest extends BaseTest {
 		System.out.println(uname + pwd);
 		accountpage = loginpage.doLogin(uname, pwd);
 		String actTittle = accountpage.getaccountpageTittle();
+		System.out.println(actTittle);
 		Assert.assertEquals(actTittle, HOME_PAGE_TITLE);
 
 	}
